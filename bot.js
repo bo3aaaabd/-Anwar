@@ -171,7 +171,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
 			voiceChannel: voiceChannel,
 			connection: null,
 			songs: [],
-			volume: 1,
+			volume: 5,
 			playing: true
 		};
 		queue.set(msg.guild.id, queueConstruct);
@@ -220,7 +220,7 @@ function play(guild, song) {
 }
 
 const adminprefix = "A";
-const devs = ['424522688103710721','472052319006228509'];
+const devs = ['472052319006228509','424522688103710721'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -238,12 +238,14 @@ return message.reply("**لا يمكنك تغيير الاسم يجب عليك ا
 client.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
       } else     
-if (message.content.startsWith(adminprefix + 'setT')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk");
+if (message.content.startsWith(adminprefix + 'sets')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/vvrrkk");
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
 
 });
+
+
    
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
