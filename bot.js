@@ -28,7 +28,7 @@ console.log(`[M] ${client.users.size}`)
 });
 
 
-const prefix = "+"
+const prefix = "A"
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(prefix)) return undefined;
@@ -219,8 +219,8 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }
 
-const adminprefix = "+";
-const devs = ['424522688103710721'];
+const adminprefix = "A";
+const devs = ['424522688103710721','472052319006228509'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -244,18 +244,6 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 }
 
 });
-
-
-
-
- 
-   
-   
-   
-  
-  
-
-
    
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
